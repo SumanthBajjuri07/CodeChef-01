@@ -1,0 +1,46 @@
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+     int t;
+     cin>>t;
+     while(t--){
+          string s;
+          cin >> s;
+          int n;
+          n=s.length();
+          int sum,max;
+          sum=0;
+          max=0;
+          int arr[26]={0};
+          
+          
+          for(int i=0; i<n; i++){
+               arr[(s[i]%97)]++;
+          
+          }
+          
+          for(int i=0; i<26; i++){
+               sum = sum+arr[i];
+               if(max<arr[i]){
+                    max=arr[i];
+                    
+               }
+          }
+          
+          if(max==(sum-max)){
+               cout<<"YES"<<endl;
+          }else{
+               cout<<"NO"<<endl;
+          }
+          
+        
+          
+     }
+	// your code goes here
+	return 0;
+}
