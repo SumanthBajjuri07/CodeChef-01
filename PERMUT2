@@ -1,0 +1,31 @@
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin>>n;
+	while(n){
+	    int a[n] = {};
+	    int b[n] = {};
+	    for(int i = 0;i<n;i++){
+	        cin>>a[i];
+	        b[a[i]-1] = i+1;
+	    }
+	    int f = true;
+	    for(int i = 0;i<n;i++){
+	        if(a[i] != b[i]){
+	            cout<<"not ambiguous"<<endl;
+	            f = false;
+	            break;
+	        }
+	    }
+	    if(f){
+	        cout<<"ambiguous"<<endl;
+	    }
+	    cin>>n;
+	}
+	return 0;
+}
