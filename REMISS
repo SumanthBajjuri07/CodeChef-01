@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+     int t;
+     cin >> t;
+     while(t--){
+          int a,b;
+          cin >> a >> b;
+          int min, max;
+          if(a>b){
+               min=a;
+          }else{
+               min=b;
+          }
+          max=a+b;
+          
+          cout << min << " " << max <<endl;
+     }
+	// your code goes here
+	return 0;
+}
