@@ -1,0 +1,30 @@
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	 string s,fh,sh;
+	 fh="";
+	 sh="";
+	 cin>>s;
+	 int n=s.length();
+	 fh = s.substr(0,n/2);
+	 int x=n%2==0?n/2:n/2+1;
+	 sh = s.substr(x,n/2);
+	 sort(fh.begin(),fh.end());
+	 sort(sh.begin(),sh.end());
+	 if(!fh.compare(sh))
+	 cout<<"YES\n";
+	 else
+	 cout<<"NO\n";
+	    
+	}
+	return 0;
+}
