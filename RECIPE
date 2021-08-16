@@ -1,0 +1,30 @@
+
+
+
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int T;
+    cin>>T;
+    while(T--){
+        int n,c;
+        cin>>n;
+        int arr[n];
+        for(int i=0;i<n;i++){
+            cin>>arr[i];
+        }
+        
+        c=__gcd(arr[0],arr[1]);
+        for(int k=2;k<n;k++){
+            c=__gcd(c,arr[k]);
+        }
+        for(int i=0;i<n;i++){
+            cout<<arr[i]/c<<" ";
+        }
+        cout<<endl;
+    }
+	return 0;
+}
