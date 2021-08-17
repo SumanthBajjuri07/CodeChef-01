@@ -1,0 +1,39 @@
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+
+    
+    long long n,b,m;
+    cin>>n>>b>>m;
+
+    long long time=0;
+    while(n>0)
+    {
+        if(n%2==0)
+        {
+          time=time+(n/2)*m +b;
+          n=n-(n/2);
+          m=2*m;
+        }
+        else if(n%2!=0)
+        {
+          time=time+ ((n+1)/2)*m +b;
+          n=n-((n+1)/2);
+          m=2*m;
+
+        }
+       
+    }
+    cout<<time-b<<endl;
+    }
+    return 0;
+}
