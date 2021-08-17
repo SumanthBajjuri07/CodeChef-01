@@ -1,0 +1,22 @@
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int t;
+   cin>>t;
+   while(t--)
+   {
+       int a,b,p;
+       cin>>a>>b;
+       p=(b*b)/(2*a);
+       cout<<p<<endl;
+   }
+
+    return 0;
+}
