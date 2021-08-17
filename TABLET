@@ -1,0 +1,34 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int t;
+  cin>>t;
+  while(t--){
+      int max=0;
+   int n,b;
+   cin>>n>>b;
+   int w[n],h[n],p[n];
+   for(int i=0;i<n;i++){
+       cin>>w[i];
+        cin>>h[i];
+         cin>>p[i];
+         if(p[i]<=b){
+             if(max<(w[i]*h[i]))
+             {
+                 max=(w[i]*h[i]);
+             }
+         }
+   }if(max!=0)
+   {
+       cout<<max<<endl;
+   }else{
+       cout<<"no tablet"<<endl;
+   }
+  }
+    return 0;
+}
