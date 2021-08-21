@@ -1,0 +1,36 @@
+
+
+
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+ int T;
+    cin>>T;
+    while(T--)
+    {
+        int N,k;
+        cin>>N;
+        int A[100];
+        for(int i=0;i<N;i++)
+        {
+            cin>>A[i];
+        }
+        cin>>k;
+        int song = A[k-1];
+        sort(A,A+N);
+        for(int i=0;i<N;i++)
+        {
+            if(A[i]==song)
+            {
+                cout<<i+1<<endl;
+                break;
+            }
+        }
+    }
+    return 0;
+}
+	
