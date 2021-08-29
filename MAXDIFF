@@ -1,0 +1,42 @@
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+	int n,k;
+	cin>>n>>k;
+	int arr[n];
+	for(int i=0;i<n;i++){
+		cin>>arr[i];
+	}
+	sort(arr,arr+n);
+	int son;
+	int popa;
+	if(n>=2*k){
+		son=k;
+		popa=n-k;
+	}
+	else{
+		son=n-k;
+		popa=k;
+	}
+	int ws=0,wp=0;
+	for(int i=0;i<son;i++){
+		ws+=arr[i];
+	}
+	for(int i=son;i<n;i++){
+		wp+=arr[i];
+	}
+	cout<<wp-ws<<endl;
+}
+int main(){
+	int t=1;
+	cin>>t;
+	while(t--){
+		solve();
+	}
+}
+
+
