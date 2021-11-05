@@ -25,7 +25,7 @@ int main() {
 	            
 	        total += T*D;
 	    }
-	    cout<<total<<endl;
+	    cout<<totalT<<endl;
 	   
 	}
 	return 0;
